@@ -36,6 +36,8 @@ gem 'jbuilder', '2.7.0'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  # Updates sqlite3 so I can deploy to Heroku (see Listing 1.14 in tutorial)
+  gem 'sqlite3', '1.3.13'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '9.0.6', platforms: :mri
 end
@@ -45,8 +47,13 @@ group :development do
   gem 'web-console', '3.5.1'
   gem 'listen', '3.0.8'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem 'spring', '2.0.2'
   gem 'spring-watcher-listen', '2.0.1'
+end
+
+group :production do  
+  #Access to deploy to Heroku
+  gem 'pg', '0.20.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
