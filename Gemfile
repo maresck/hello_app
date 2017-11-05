@@ -36,8 +36,6 @@ gem 'jbuilder', '2.7.0'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Updates sqlite3 so I can deploy to Heroku (see Listing 1.14 in tutorial)
-  gem 'sqlite3', '1.3.13'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '9.0.6', platforms: :mri
 end
